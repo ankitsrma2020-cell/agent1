@@ -20,4 +20,7 @@ export async function loginApi(credentials: LoginCredentials): Promise<LoginResp
 
   const data = (await response.json()) as Partial<LoginResponse> & { message?: string }
   if (!response.ok || !data.token || !data.user) {
- 
+    throw new Error(data.message || 'Invalid email or password.')
+  }
+  return data as LoginResponse
+}
