@@ -18,4 +18,7 @@ export async function signupApi(user: SignupUser): Promise<SignupResponse> {
     }),
   })
 
-  co
+  const data = (await response.json()) as SignupResponse
+  if (!response.ok) throw new Error(data.message || 'Unable to create account.')
+  return data
+}
