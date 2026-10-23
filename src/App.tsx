@@ -20,7 +20,10 @@ function App() {
 
   if (window.location.pathname === '/dashboard') return <Dashboard />
   if (window.location.pathname === '/users') return <Users />
- rn window.location.pathname === '/signup' ? <Signup /> : <Login />
+  if (window.location.pathname === '/activity') return <Activity />
+  if (window.location.pathname === '/leaderboard') return <Leaderboard />
+  if (window.location.pathname === '/sessions') return <Sessions />
+  return window.location.pathname === '/signup' ? <Signup /> : <Login />
 }
 
 export default App
