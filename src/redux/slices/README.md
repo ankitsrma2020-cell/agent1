@@ -1,0 +1,1 @@
+Add Redux Toolkit slices to this folder as the application state grows.
