@@ -2,10 +2,6 @@ import { authenticatedFetch } from './authenticatedFetch.ts'
 
 const AUTH_API_URL = 'http://localhost:5000/api/auth'
 
-export type ChangePasswordRequest = {
-  currentPassword: string
-  newPassword: string
-}
 
 export async function changePasswordApi(
   passwords: ChangePasswordRequest,
